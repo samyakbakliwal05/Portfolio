@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go to Sleep Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 20% auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            cursor: pointer;
+            color: red;
+            font-size: 20px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <button id="showModal">Click Me</button>
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Go to Sleep!</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("showModal").onclick = function() {
+            document.getElementById("myModal").style.display = "block";
+        }
+        document.querySelector(".close").onclick = function() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target === document.getElementById("myModal")) {
+                document.getElementById("myModal").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

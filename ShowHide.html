@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title> Show And Hide Para </title>
+</head>
+<body>
+    <p id="text">This is a paragraph.</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#text").hide();
+            });
+            $("#show").click(function(){
+                $("#text").show();
+            });
+        });
+    </script>
+</body>
+</html>

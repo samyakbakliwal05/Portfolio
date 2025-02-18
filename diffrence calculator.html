@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Subtraction</title>
+        <script type = "text/javascript">
+            function calc() {
+                value1 = 
+                parseInt(document.mainform.textbox1.value);
+                value2 = 
+                parseInt(document.mainform.textbox2.value);
+                diff = value1 - value2 ;
+                document.mainform.textboxdiff.value = diff;
+            }
+            </script>
+    </head>
+    <body>
+        <form name = "mainform">
+            <input type="text" name="textbox1"/><br/>
+            <input type="text" name="textbox2"/><br/>
+            <input type= "button" value="Diffrence" onclick="javascript: calc()"/>
+            <input type= "text" name= "textboxdiff" readonly="readonly"/>
+        </form>
+    </body>
+</html>
